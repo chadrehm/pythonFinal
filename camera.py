@@ -32,7 +32,7 @@ def printMenu() :
        "3. Preview Contrast\t9. Set Text Size 6-160\t15. Take Pictures (int)\n"+
        "4. Preview Brightness\t10. Set Rotation\t16. Take Recording\n"+
        "5. Print Settings\t11. Set Sleep (int)\t17. Take Picture W/ Caption\n"+
-       "6. Set Alpha (int)\t12. Set Effect\t\t0. exit")
+       "6. Set Alpha (int)\t12. Set Effect\t\t18. Print System Info\n0. exit")
 
 # Menu choice logic function
 def executeChoice(cam, choice) :
@@ -75,6 +75,8 @@ def executeChoice(cam, choice) :
   cam.takeRecording()
  elif choice == 17 :
   cam.takePictureWithCaption()
+ elif choice == 18 :
+  os.system("sudo lshw")
  else :
   print("That is not a valid choice")
 
@@ -90,6 +92,7 @@ class PiCam :
   self.annotateTextSize = ANNOTATE_TEXT_SIZE
   self.effect = EFFECT
 
+ # Configure Camera to used set variables
  def configCamera(self, alphaBool) :
   camera = self.camera
   camera.rotation = self.rotate
@@ -234,7 +237,7 @@ def main() :
   if usrIn > 0 :
    executeChoice(cam, usrIn)
   # clear menu and reprint
-  if usrIn != 5 :
+  if usrIn != 5 or usrIn != 18 :
    os.system('cls' if os.name == 'nt' else 'clear')
 
 main()
