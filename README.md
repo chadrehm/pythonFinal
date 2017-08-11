@@ -1,6 +1,6 @@
 # pythonFinal
 
-If using Raspberry Pi 2 and the Pi Camera this file makes work with the pi camera trivial.  There is a menu of options to select from.
+If using Raspberry Pi 2 and the Pi Camera this file makes work with the pi camera trivial.  There is a menu of options to select from.  The Program was writen for Python 2.
 
 ### User Menu
 
@@ -24,6 +24,7 @@ Options                         | Input Type  | Range                 | Action
 |15. Take Pictures              | integer     | n/a                   | Take several time laps pictures 
 |16. Take Recording             | n/a         | n/a                   | Take a recording
 |17. Take Picture with Caption  | string      | n/a                   | Take a picture and annotate text
+|18. Print OS information       | n/a         | n/a                   | Print system information.
 
 ### Constants
 
