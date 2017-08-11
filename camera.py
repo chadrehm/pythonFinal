@@ -2,7 +2,7 @@
 # program name: PiCam
 # name: Chad Rehm
 # date: 8/9/17
-# This program create an easy interface to pic camera functions.
+# This program create an easy interface to pic camera functions. This program was writen to run in Python 2.
 
 from picamera import PiCamera, Color
 from time import sleep
